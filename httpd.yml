@@ -12,11 +12,6 @@
     - name: adding content ussinf lineinfile module
       lineinfile:
         dest: /var/www/html/index.html
-        line: "Hello from {{ item }}"
-      with_items:
-        - node1
-        - node2
-        - node3
-        - node4
+        line: "Hello from sowjanya"
     - name: start httpd service
       service: name=httpd state=started enabled=yes
