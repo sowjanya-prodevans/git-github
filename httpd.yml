@@ -1,14 +1,10 @@
 ---
 - hosts: all
-  become: true
   remote_user: root
   tasks:
     - name: install httpd service 
       yum: name=httpd state=latest
-    - name: download configuration file
-      get_url:
-        url: http://rhgls/httpd.conf.template
-        dest: /etc/http/conf/httpd.conf
+    - name: download configuration file     
     - name: adding content ussinf lineinfile module
       lineinfile:
         dest: /var/www/html/index.html
