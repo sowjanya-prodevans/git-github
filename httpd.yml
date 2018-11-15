@@ -7,7 +7,7 @@
     - name: adding content ussinf lineinfile module
       copy:
         dest: /var/www/html/index.html
-        content: "Hello from sowjanya"
+        content: "Hello Welcome to Prodevans"
     - name: start httpd service
       service: name=httpd state=started enabled=yes
     - name: add the firewall
