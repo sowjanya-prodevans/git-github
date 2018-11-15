@@ -3,7 +3,7 @@
   become: true
   remote_user: root
   tasks:
-    - name: install httpd service
+    - name: install httpd service on my machine
       yum: name=httpd state=latest
     - name: download configuration file
       get_url:
@@ -15,3 +15,4 @@
         line: "Hello from sowjanya"
     - name: start httpd service
       service: name=httpd state=started enabled=yes
+      ....
