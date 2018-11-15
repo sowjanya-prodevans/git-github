@@ -3,8 +3,7 @@
   remote_user: root
   tasks:
     - name: install httpd service 
-      yum: name=httpd state=latest
-    - name: download configuration file     
+      yum: name=httpd state=latest   
     - name: adding content ussinf lineinfile module
       lineinfile:
         dest: /var/www/html/index.html
