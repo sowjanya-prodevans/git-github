@@ -10,6 +10,6 @@
         content: "Hello Welcome to Prodevans"
     - name: start httpd service
       service: name=httpd state=started enabled=yes
-    - name: add the firewall
+    - name: add the firewall service
       firewalld: service=http state=enabled permanent=true immediate=yes
       
