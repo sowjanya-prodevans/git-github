@@ -5,9 +5,9 @@
     - name: install httpd service 
       yum: name=httpd state=latest   
     - name: adding content ussinf lineinfile module
-      lineinfile:
+      copy:
         dest: /var/www/html/index.html
-        line: "Hello from sowjanya"
+        content: "Hello from sowjanya"
     - name: start httpd service
       service: name=httpd state=started enabled=yes
       
