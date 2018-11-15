@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.10.47
+- hosts: all
   remote_user: root
   tasks:
     - name: install httpd service 
