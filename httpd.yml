@@ -2,7 +2,7 @@
 - hosts: all
   remote_user: root
   tasks:
-    - name: install httpd service 
+    - name: install httpd service on my machine
       yum: name=httpd state=latest   
     - name: adding content ussinf lineinfile module
       copy:
