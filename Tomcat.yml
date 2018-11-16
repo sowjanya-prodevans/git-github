@@ -4,7 +4,7 @@
   become_method: sudo
   become: true
   tasks:
-  - name: Install tomcat
+  - name: Install tomcat application
     yum: name=tomcat state=latest
   - name: Install tomcat admin packages
     yum: name={{item}} state=latest
