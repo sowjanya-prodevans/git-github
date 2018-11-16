@@ -1,0 +1,15 @@
+---
+- hosts: all
+  remote_user: devopsuser
+  become_method: sudo
+  become: true
+  tasks:
+  - name: Install tomcat
+    yum: name=tomcat state=latest
+  - name: Install tomcat admin packages
+    yum: name={{item}} state=latest
+    with_items:
+      - tomcat-webapps
+      - tomcat-admin-webapps
+  - name: Start and enable the service
+    service: name=tomcat state=started enabled=yes
