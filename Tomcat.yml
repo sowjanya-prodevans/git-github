@@ -13,5 +13,3 @@
       - tomcat-admin-webapps
   - name: Start and enable the service
     service: name=tomcat state=started enabled=yes
-
-
