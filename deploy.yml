@@ -1,6 +1,8 @@
 ---
 - name: To deploy Java project on server.
   hosts: all
+  remote_user: harish
+  become: true
 #  vars_files:
 #  - credential.yml
   tasks:
