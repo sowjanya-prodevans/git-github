@@ -1,8 +1,8 @@
 ---
 - name: To deploy Java project on server.
   hosts: all
-  vars_files:
-  - credential.yml
+#  vars_files:
+#  - credential.yml
   tasks:
   - name: Stop tomcat server
     command: ./shutdown.sh
