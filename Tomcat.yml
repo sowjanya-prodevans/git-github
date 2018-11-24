@@ -1,8 +1,5 @@
 ---
 - hosts: all
-  remote_user: devopsuser
-  become_method: sudo
-  become: true
   tasks:
   - name: Install tomcat application
     yum: name=tomcat state=latest
